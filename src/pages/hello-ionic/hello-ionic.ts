@@ -8,13 +8,13 @@ declare var $$$: any;
   selector: 'page-hello-ionic',
   templateUrl: 'hello-ionic.html'
 })
-export class HelloIonicPage implements AfterViewInit {
+export class HelloIonicPage {
   private stxx: any;
   constructor() {
     // Create a STXChart object, the main object for drawing charts. 
   }
 
-  ngAfterViewInit() {
+  loadChart() {
     this.stxx = new CIQ.ChartEngine({ container: $$$(".chartContainer") });
     this.stxx.newChart("SPY", sample5min);
   }
